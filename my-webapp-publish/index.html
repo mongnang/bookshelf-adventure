@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>한 권으로의 모험</title>
+    <link rel="stylesheet" href="./style.css?v=20260707-1035">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero-screen" id="heroScreen" aria-label="도서관 입장 화면">
+        <div class="library-photo" aria-hidden="true"></div>
+        <div class="library-shade" aria-hidden="true"></div>
+        <div class="dust-layer" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="lamp-glow" aria-hidden="true"></div>
+
+        <div class="hero-copy">
+          <p class="kicker">AI 독서 모험 챗봇</p>
+          <h1>한 권으로의 모험</h1>
+          <p class="hero-subtitle">
+            책장 사이로 들어가 한 권을 고르고, 이야기 속 질문과 단서를 따라가 보세요.
+          </p>
+        </div>
+
+        <button class="enter-control" id="enterControl" type="button" aria-label="책 선택 화면으로 이동">
+          <span class="mouse-shape" aria-hidden="true"></span>
+          <span>아래로 드래그</span>
+        </button>
+      </section>
+
+      <section class="book-screen" id="bookScreen" aria-label="책 선택 화면">
+        <aside class="cover-stage" aria-live="polite">
+          <div class="cover-light" aria-hidden="true"></div>
+          <div class="selected-book">
+            <div class="cover-art" id="selectedCover" role="img" aria-label="선택한 책 표지">
+              <span class="cover-frame"></span>
+              <span class="cover-title" id="coverTitle">메밀꽃 필 무렵</span>
+              <span class="cover-author" id="coverAuthor">이효석</span>
+              <span class="cover-mark">AI Reading Adventure</span>
+            </div>
+            <div class="selected-meta">
+              <p class="section-label">선택한 책</p>
+              <h2 id="selectedTitle">메밀꽃 필 무렵</h2>
+              <p id="selectedAuthor">이효석</p>
+              <p id="selectedDescription">
+                달빛 아래 길 위에서 이어지는 만남과 기억을 따라가는 한국 단편소설입니다.
+              </p>
+              <button class="start-button" id="startButton" type="button">이 책으로 모험 시작</button>
+            </div>
+          </div>
+        </aside>
+
+        <section class="shelf-stage" aria-label="책장">
+          <header class="shelf-header">
+            <p class="section-label">책장</p>
+            <h2>책등을 눌러 책을 고르세요</h2>
+            <p>오른쪽 또는 왼쪽으로 드래그하면 책장이 부드럽게 움직입니다.</p>
+          </header>
+
+          <div class="shelf-window" id="shelfWindow">
+            <div class="shelf-row" id="shelfRow" aria-label="선택 가능한 책 목록"></div>
+          </div>
+
+          <div class="shelf-wood" aria-hidden="true"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./app.js?v=20260707-1035"></script>
+  </body>
+</html>
